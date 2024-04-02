@@ -10,3 +10,6 @@ commonLabels:
 
 resources:
 - ../../../apps/pko-ambulance-ufe
+
+components:
+ - ../../../components/version-developers
