@@ -1,0 +1,19 @@
+apiVersion: fe.milung.eu/v1
+kind: WebComponent
+metadata:
+  name: pko-ambulance-vaccination
+spec:
+  module-uri: http://pko-ambulance-ufe.wac-hospital/build/ambulance-ufe.esm.js
+                     # module web komponentu pre tento mikroFE
+                     # - umiestnený v namespace wac-hospital
+  navigation:
+    - element: pko-ambulance-vc-app
+      path: pko-ambulance-vc
+      title: Portál na registráciu očkovaní pko   
+      details: Dáva možnosť pacientom sa zaregistrovať na dorbovoľné očkovanie
+  preload: false                    # určuje, či má byť web komponent načítaný spolu s hlavnou stránkou
+  proxy: true                       # pre komponenty v rámci klastra, neprístupné na verejnej sieti
+                                    # musí byť táto hodnota nastavená na true
+  hash-suffix: v1alpha1             # voliteľný suffix pre načítanie modulu web komponentu - jeho zmenou
+                                    # sa mení názov URL pre modul a tým je možné predísť problémom
+                                    # s verziami vo vyrovnávacích pamätiach

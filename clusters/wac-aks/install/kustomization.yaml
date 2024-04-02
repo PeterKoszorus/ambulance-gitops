@@ -9,6 +9,7 @@ commonLabels:
 
 resources:
  - ../../../apps/pko-ambulance-ufe
+ - ../../../apps/pko-ambulance-vaccination
 
 
 components:

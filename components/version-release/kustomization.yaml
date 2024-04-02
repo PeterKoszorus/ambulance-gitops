@@ -14,6 +14,13 @@ replacements:
          name: pko-ambulance-ufe
      fieldPaths:
          - spec.hash-suffix
+   - select:
+         group: fe.milung.eu
+         version: v1
+         kind: WebComponent
+         name: pko-ambulance-vaccination
+     fieldPaths:
+         - spec.hash-suffix
    source:
      version: v1
      kind: Deployment
