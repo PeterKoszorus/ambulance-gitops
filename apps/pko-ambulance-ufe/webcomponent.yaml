@@ -8,16 +8,15 @@ spec:
                      # - umiestnený v namespace wac-hospital
   navigation:
     - element: pko-ambulance-wl-app    # element, ktorý bude vložený na stránku
-                                    # pri navigácii na zoznam čakajúcich
-      path: pko-ambulance-wl      # cesta, ktora sa zobrazi v address bare v prehliadaci, ked bude tento mikroFE aktívny
-      title: Zoznam čakajúcich pko      # názov mikro aplikácie
-      details: Spravuje zoznam pacientov čakajúcich na vyšetrenie v ambulancii
-    - element: pko-ambulance-wl-app
       attributes:
       - name: api-base
         value: http://localhost:4999/api
       - name: ambulance-id
         value: bobulova
+                                    # pri navigácii na zoznam čakajúcich
+      path: pko-ambulance-wl      # cesta, ktora sa zobrazi v address bare v prehliadaci, ked bude tento mikroFE aktívny
+      title: Zoznam čakajúcich pko      # názov mikro aplikácie
+      details: Spravuje zoznam pacientov čakajúcich na vyšetrenie v ambulancii
   preload: false                    # určuje, či má byť web komponent načítaný spolu s hlavnou stránkou
   proxy: true                       # pre komponenty v rámci klastra, neprístupné na verejnej sieti
                                     # musí byť táto hodnota nastavená na true
