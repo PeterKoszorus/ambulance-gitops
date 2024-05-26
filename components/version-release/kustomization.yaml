@@ -9,7 +9,10 @@ images:
   newTag: 1.1.0
 - name: peterkoszrous/ambulance-vaccination
   newName: peterkoszorus/ambulance-vaccination
-  newTag: 1.0.0
+  newTag: 1.1.0
+- name: peterkoszorus/ambulance-webapi-vaccination
+  newName: peterkoszorus/ambulance-webapi-vaccination
+  newTag: 1.0.1
 
 replacements:
  - targets:

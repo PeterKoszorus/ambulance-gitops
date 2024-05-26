@@ -1,0 +1,50 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: pko-ambulance-webapi-vaccination
+spec:
+  parentRefs:
+    - name: wac-hospital-gateway
+      namespace: wac-hospital
+    - name: wac-hospital-gateway  # Hack to make it work for common cluster
+      namespace: wac-hospital-system
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /pko-api-vaccination
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /api
+      backendRefs:
+        - group: ""
+          kind: Service
+          name: pko-ambulance-webapi-vaccination
+          port: 80
+    - matches:
+      - path:
+          type: PathPrefix
+          value: /pko-openapi-ui-vaccination
+      backendRefs:
+        - group: ""
+          kind: Service
+          name: pko-openapi-ui-vaccination
+          port: 80
+    - matches:
+        - path:
+            type: Exact
+            value: /pko-openapi-vaccination
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplaceFullPath
+              replaceFullPath: /openapi
+      backendRefs:
+        - group: ""
+          kind: Service
+          name: pko-ambulance-webapi-vaccination
+          port: 80

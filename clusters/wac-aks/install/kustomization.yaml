@@ -11,6 +11,7 @@ resources:
  - ../../../apps/pko-ambulance-ufe
  - ../../../apps/pko-ambulance-vaccination
  - ../../../apps/pko-ambulance-webapi
+ - ../../../apps/pko-ambulance-webapi-vaccination
 
 
 components:
