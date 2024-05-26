@@ -15,19 +15,35 @@ images:
   newTag: 1.0.1
 
 replacements:
- - targets:
-   - select:
-         group: fe.milung.eu
-         version: v1
-         kind: WebComponent
-         name: pko-ambulance-ufe
-     fieldPaths:
-         - spec.hash-suffix
-   source:
-     version: v1
-     kind: Deployment
-     name:  pko-ambulance-ufe-deployment
-     fieldPath: spec.template.spec.containers.0.image
-     options:
-         delimiter: ':'
-         index: 1
+  - targets:
+      - select:
+          group: fe.milung.eu
+          version: v1
+          kind: WebComponent
+          name: pko-ambulance-ufe
+        fieldPaths:
+          - spec.hash-suffix
+    source:
+      version: v1
+      kind: Deployment
+      name: pko-ambulance-ufe-deployment
+      fieldPath: spec.template.spec.containers.0.image
+      options:
+        delimiter: ':'
+        index: 0
+  - targets:
+      - select:
+          group: fe.milung.eu
+          version: v1
+          kind: WebComponent
+          name: pko-ambulance-vaccination
+        fieldPaths:
+          - spec.hash-suffix
+    source:
+      version: v1
+      kind: Deployment
+      name: pko-ambulance-vaccination-deployment
+      fieldPath: spec.template.spec.containers.0.image
+      options:
+        delimiter: ':'
+        index: 0
