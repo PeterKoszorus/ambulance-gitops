@@ -1,18 +1,19 @@
 apiVersion: kustomize.config.k8s.io/v1alpha1
 kind: Component
+
 images:
-- name: peterkoszorus/ambulance-ufe
-  newName: peterkoszorus/ambulance-ufe
-  newTag: 1.1.1  
-- name: peterkoszorus/ambulance-wl-webapi
-  newName: peterkoszorus/ambulance-wl-webapi
-  newTag: 1.1.0
-- name: peterkoszrous/ambulance-vaccination
-  newName: peterkoszorus/ambulance-vaccination
-  newTag: 1.1.0
-- name: peterkoszorus/ambulance-webapi-vaccination
-  newName: peterkoszorus/ambulance-webapi-vaccination
-  newTag: 1.0.1
+  - name: peterkoszorus/ambulance-ufe
+    newName: peterkoszorus/ambulance-ufe
+    newTag: 1.1.1  
+  - name: peterkoszorus/ambulance-wl-webapi
+    newName: peterkoszorus/ambulance-wl-webapi
+    newTag: 1.1.0
+  - name: peterkoszorus/ambulance-vaccination
+    newName: peterkoszorus/ambulance-vaccination
+    newTag: 1.1.0
+  - name: peterkoszorus/ambulance-webapi-vaccination
+    newName: peterkoszorus/ambulance-webapi-vaccination
+    newTag: 1.0.1
 
 replacements:
   - targets:
@@ -46,4 +47,4 @@ replacements:
       fieldPath: spec.template.spec.containers.0.image
       options:
         delimiter: ':'
-        index: 0
+        index: 1
