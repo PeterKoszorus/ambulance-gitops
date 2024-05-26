@@ -3,7 +3,13 @@ kind: Component
 images:
 - name: peterkoszorus/ambulance-ufe
   newName: peterkoszorus/ambulance-ufe
-  newTag: 1.0.0  #aktuálna verzia docker obrazu, ktorú chcete aby používatelia - cvičiaci - videli nasadenú
+  newTag: 1.1.0  
+- name: peterkoszorus/ambulance-wl-webapi
+  newName: peterkoszorus/ambulance-wl-webapi
+  newTag: 1.1.0
+- name: peterkoszrous/ambulance-vaccination
+  newName: peterkoszorus/ambulance-vaccination
+  newTag: 1.0.0
 
 replacements:
  - targets:
@@ -12,13 +18,6 @@ replacements:
          version: v1
          kind: WebComponent
          name: pko-ambulance-ufe
-     fieldPaths:
-         - spec.hash-suffix
-   - select:
-         group: fe.milung.eu
-         version: v1
-         kind: WebComponent
-         name: pko-ambulance-vaccination
      fieldPaths:
          - spec.hash-suffix
    source:
