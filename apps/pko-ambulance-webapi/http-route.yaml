@@ -15,8 +15,8 @@ spec:
            value: /pko-api
    - matches:
         - path:
-            type: PathPrefix
-            value: /pko-openapi-ui
+           type: PathPrefix
+           value: /pko-openapi-ui
       backendRefs:
         - group: ""
           kind: Service
@@ -24,14 +24,14 @@ spec:
           port: 80
    - matches:
         - path:
-            type: Exact
-            value: /pko-openapi
+           type: Exact
+           value: /pko-openapi
       filters:
       - type: URLRewrite
         urlRewrite:
           path:
-            type: ReplaceFullPath
-            replaceFullPath: /openapi
+           type: ReplaceFullPath
+           replaceFullPath: /openapi
       backendRefs:
         - group: ""
           kind: Service
