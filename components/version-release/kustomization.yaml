@@ -3,7 +3,7 @@ kind: Component
 images:
 - name: peterkoszorus/ambulance-ufe
   newName: peterkoszorus/ambulance-ufe
-  newTag: 1.1.0  
+  newTag: 1.1.1  
 - name: peterkoszorus/ambulance-wl-webapi
   newName: peterkoszorus/ambulance-wl-webapi
   newTag: 1.1.0
