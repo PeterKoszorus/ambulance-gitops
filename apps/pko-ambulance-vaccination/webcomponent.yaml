@@ -3,7 +3,7 @@ kind: WebComponent
 metadata:
   name: pko-ambulance-vaccination
 spec:
-  module-uri: http://pko-ambulance-vaccination.wac-hospital/build/ambulance-ufe.esm.js
+  module-uri: http://pko-ambulance-vaccination.wac-hospital/build/pko-ambulance-vaccination.esm.js
                      # module web komponentu pre tento mikroFE
                      # - umiestnený v namespace wac-hospital
   navigation:
