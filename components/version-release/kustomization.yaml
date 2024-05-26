@@ -30,7 +30,7 @@ replacements:
       fieldPath: spec.template.spec.containers.0.image
       options:
         delimiter: ':'
-        index: 0
+        index: 1
   - targets:
       - select:
           group: fe.milung.eu
