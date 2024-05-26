@@ -3,8 +3,12 @@ kind: Kustomization
 
 resources:
 - https://github.com/milung/ufe-controller//configs/k8s/kustomize
+- http-route.yaml
 
 namespace: wac-hospital # chceme tieto objekty umiestniť do `wac-hospital` namespace
 
 commonLabels:
   app.kubernetes.io/component: ufe-controller
+
+patches:
+- path: patches/ufe-controller.deployment.yaml
